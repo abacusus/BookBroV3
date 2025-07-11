@@ -54,7 +54,7 @@ function App() {
         {/* Login: only show if not logged in */}
         <Route
           path="/login"
-          element={user ? <Navigate to="/books" /> : <Login />}
+          element={user ? <Navigate to="/" /> : <Login />}
         />
 
         {/* Books Form: only accessible if logged in */}
