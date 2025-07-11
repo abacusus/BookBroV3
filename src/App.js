@@ -46,26 +46,25 @@ function App() {
   return (
      <Router>
       <Routes>
-        {/* Home page: accessible to everyone */}
-        <Route path="/" element={<Home />} />
+  {/* Public Route: Login */}
+  <Route
+    path="/login"
+    element={!user ? <Login /> : <Navigate to="/" />}
+  />
 
-        <Route path="/list" element={<BookList />} />
+  {/* Protected Routes: accessible only if logged in */}
+  {user && (
+    <>
+      <Route path="/" element={<Home />} />
+      <Route path="/list" element={<BookList />} />
+      <Route path="/books" element={<BooksForm user={user} />} />
+    </>
+  )}
 
-        {/* Login: only show if not logged in */}
-        <Route
-          path="/login"
-          element={user ? <Navigate to="/" /> : <Login />}
-        />
+  {/* Catch-all: redirect unknown or unauthorized routes */}
+  <Route path="*" element={<Navigate to={user ? "/" : "/login"} />} />
+</Routes>
 
-        {/* Books Form: only accessible if logged in */}
-        <Route
-          path="/books"
-          element={user ? <BooksForm user={user} /> : <Navigate to="/login" />}
-        />
-
-        {/* Catch-all: redirect unknown routes to home */}
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
 
       {/* Optional ChatWidget */}
       {user && <ChatWidget user={user} />}
