@@ -98,9 +98,8 @@ const Home = () => {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="fixed top-[90px] left-1/2 transform -translate-x-1/2 z-40 w-[90%] max-w-4xl bg-white/80 backdrop-blur-md shadow-md border border-black/20 rounded-xl px-6 py-4 flex flex-col space-y-3 md:hidden text-base font-medium">
-          <a href="/" className="hover:underline">Home</a>
-          <a href="/buy" className="hover:underline">Buy</a>
-          <a href="/sell" className="hover:underline">Sell</a>
+          <a href="/list" className="hover:underline">Buy</a>
+          <a href="/books" className="hover:underline">Sell</a>
           <a href="/login" className="hover:underline">Login</a>
         </div>
       )}
