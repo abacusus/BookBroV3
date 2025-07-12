@@ -315,9 +315,9 @@ Join us on this mission to make reading a little greener!
       placeholder="Search books..."
       className="w-full px-4 py-2 text-gray-700 focus:outline-none"
     />
-    <button className="bg-darkviolet hover:bg-violet-800 text-white px-4 py-2 rounded-r-full">
+   <a href="/list"> <button className="bg-darkviolet hover:bg-violet-800 text-white px-4 py-2 rounded-r-full">
       Search
-    </button>
+    </button></a>
   </div>
 </div>
 
@@ -331,22 +331,43 @@ Join us on this mission to make reading a little greener!
 
   {/* Cards Grid */}
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-    {[...Array(6)].map((_, i) => (
-      <div
-        key={i}
-        className="h-40 flex items-center justify-center text-center bg-gray-100 border rounded-lg shadow hover:shadow-md transition"
-      >
-        <p className="text-lg font-semibold text-gray-700">Cards to Display Books</p>
-      </div>
-    ))}
+    
+      <a href="/list">
+ <div className="h-40 w-full flex items-center justify-center overflow-hidden rounded-lg border bg-transparent shadow hover:shadow-md transition">
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMEHShDmmjXR9_48FHYIPC__FdN4eTorJydw&s"
+    alt="Book Cover"
+    className="h-full object-contain"
+  />
+</div></a>
+  
+<a href="/list">
+ <div className="h-40 w-full flex items-center justify-center overflow-hidden rounded-lg border bg-transparent shadow hover:shadow-md transition">
+  <img
+    src="https://m.media-amazon.com/images/I/81+Eh-enKAL.jpg"
+    alt="Book Cover"
+    className="h-full object-contain"
+  />
+</div></a>
+
+<a href="/list">
+<div className="h-40 w-full flex items-center justify-center overflow-hidden rounded-lg border bg-transparent shadow hover:shadow-md transition">
+  <img
+    src="https://thebookmasters.in/cdn/shop/files/NCERTScience_Math10.jpg?v=1718782068"
+    alt="Book Cover"
+    className="h-full object-contain"
+  />
+</div></a>
+
   </div>
 
   {/* More Button */}
-  <div className="flex justify-center">
-    <button className="px-6 py-2 bg-gray-200 hover:bg-gray-300 text-lg font-bold rounded-full shadow-md">
-      MORE
-    </button>
-  </div>
+  <a href="/list" className="flex justify-center">
+  <button className="px-6 py-2 bg-gray-200 hover:bg-gray-300 text-lg font-bold rounded-full shadow-md">
+    MORE
+  </button>
+</a>
+
 </div>
 
 
